@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Videos - VideoHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="logo">VideoHub</a>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/admin.html" class="admin-link">Admin Panel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="category-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/">Home</a> / <span id="category-name">Category</span>
+                </div>
+                <div class="category-info">
+                    <h1 id="category-title">Category Name</h1>
+                    <p id="category-description">Category description will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="videos-section">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="videos-grid" id="videos-container">
+                    <!-- Videos will be loaded here by JavaScript -->
+                    <div class="loading-spinner" id="videos-loading">
+                        <div class="spinner"></div>
+                        <p>Loading videos...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Player Modal (Same as in index.html) -->
+    <div class="modal" id="video-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="video-title">Video Title</h2>
+                <span class="close-btn" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <div class="video-loading" id="video-loading">
+                        <i class="fas fa-film"></i>
+                        <p>Loading video...</p>
+                    </div>
+                    <video id="video-player" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay" id="play-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-description">
+                    <p id="video-description-text">Video description will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VideoHub. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="category.js"></script>
+</body>
+</html>
